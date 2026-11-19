@@ -1,0 +1,271 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.3.2"
+    }
+    defaultPrim = "accessories"
+    endTimeCode = 1000000
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    startTimeCode = 0
+    upAxis = "Z"
+)
+
+over "accessories" (
+    prepend apiSchemas = ["IsaacRobotAPI"]
+)
+{
+    prepend rel isaac:physics:robotJoints = [
+        </accessories/Physics/chassis_joint>,
+        </accessories/Physics/top_plate_joint>,
+        </accessories/Physics/left_suspension_beam_spacer_joint>,
+        </accessories/Physics/left_suspension_beam_joint>,
+        </accessories/Physics/right_suspension_beam_spacer_joint>,
+        </accessories/Physics/right_suspension_beam_joint>,
+        </accessories/Physics/front_left_motor_joint>,
+        </accessories/Physics/front_right_motor_joint>,
+        </accessories/Physics/front_left_wheel_joint>,
+        </accessories/Physics/front_right_wheel_joint>,
+        </accessories/Physics/rear_left_motor_joint>,
+        </accessories/Physics/rear_right_motor_joint>,
+        </accessories/Physics/rear_left_wheel_joint>,
+        </accessories/Physics/rear_right_wheel_joint>,
+    ]
+    prepend rel isaac:physics:robotLinks = [
+        </accessories/Geometry/base_link/chassis_link>,
+        </accessories/Geometry/base_link/chassis_link/default_mount/top_plate_link>,
+        </accessories/Geometry/base_link/chassis_link/chassis_left_suspension_mount/left_suspension_beam_spacer_link>,
+        </accessories/Geometry/base_link/chassis_link/chassis_left_suspension_mount/left_suspension_beam_spacer_link/left_suspension_beam_link>,
+        </accessories/Geometry/base_link/chassis_link/chassis_right_suspension_mount/right_suspension_beam_spacer_link>,
+        </accessories/Geometry/base_link/chassis_link/chassis_right_suspension_mount/right_suspension_beam_spacer_link/right_suspension_beam_link>,
+        </accessories/Geometry/base_link/chassis_link/chassis_left_suspension_mount/left_suspension_beam_spacer_link/left_suspension_beam_link/left_suspension_beam_front_mount/front_left_motor_link>,
+        </accessories/Geometry/base_link/chassis_link/chassis_right_suspension_mount/right_suspension_beam_spacer_link/right_suspension_beam_link/right_suspension_beam_front_mount/front_right_motor_link>,
+        </accessories/Geometry/base_link/chassis_link/chassis_left_suspension_mount/left_suspension_beam_spacer_link/left_suspension_beam_link/left_suspension_beam_front_mount/front_left_motor_link/front_left_motor_mount/front_left_wheel_link>,
+        </accessories/Geometry/base_link/chassis_link/chassis_right_suspension_mount/right_suspension_beam_spacer_link/right_suspension_beam_link/right_suspension_beam_front_mount/front_right_motor_link/front_right_motor_mount/front_right_wheel_link>,
+        </accessories/Geometry/base_link/chassis_link/chassis_left_suspension_mount/left_suspension_beam_spacer_link/left_suspension_beam_link/left_suspension_beam_rear_mount/rear_left_motor_link>,
+        </accessories/Geometry/base_link/chassis_link/chassis_right_suspension_mount/right_suspension_beam_spacer_link/right_suspension_beam_link/right_suspension_beam_rear_mount/rear_right_motor_link>,
+        </accessories/Geometry/base_link/chassis_link/chassis_left_suspension_mount/left_suspension_beam_spacer_link/left_suspension_beam_link/left_suspension_beam_rear_mount/rear_left_motor_link/rear_left_motor_mount/rear_left_wheel_link>,
+        </accessories/Geometry/base_link/chassis_link/chassis_right_suspension_mount/right_suspension_beam_spacer_link/right_suspension_beam_link/right_suspension_beam_rear_mount/rear_right_motor_link/rear_right_motor_mount/rear_right_wheel_link>,
+    ]
+    token isaac:robotType = "Default"
+
+    over "Geometry"
+    {
+        over "base_link"
+        {
+            over "chassis_link" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "chassis_left_suspension_mount"
+                {
+                    over "left_suspension_beam_spacer_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        over "left_suspension_beam_link" (
+                            prepend apiSchemas = ["IsaacLinkAPI"]
+                        )
+                        {
+                            over "left_suspension_beam_front_mount"
+                            {
+                                over "front_left_motor_link" (
+                                    prepend apiSchemas = ["IsaacLinkAPI"]
+                                )
+                                {
+                                    over "front_left_motor_mount"
+                                    {
+                                        over "front_left_wheel_link" (
+                                            prepend apiSchemas = ["IsaacLinkAPI"]
+                                        )
+                                        {
+                                        }
+                                    }
+                                }
+                            }
+
+                            over "left_suspension_beam_rear_mount"
+                            {
+                                over "rear_left_motor_link" (
+                                    prepend apiSchemas = ["IsaacLinkAPI"]
+                                )
+                                {
+                                    over "rear_left_motor_mount"
+                                    {
+                                        over "rear_left_wheel_link" (
+                                            prepend apiSchemas = ["IsaacLinkAPI"]
+                                        )
+                                        {
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "chassis_right_suspension_mount"
+                {
+                    over "right_suspension_beam_spacer_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        over "right_suspension_beam_link" (
+                            prepend apiSchemas = ["IsaacLinkAPI"]
+                        )
+                        {
+                            over "right_suspension_beam_front_mount"
+                            {
+                                over "front_right_motor_link" (
+                                    prepend apiSchemas = ["IsaacLinkAPI"]
+                                )
+                                {
+                                    over "front_right_motor_mount"
+                                    {
+                                        over "front_right_wheel_link" (
+                                            prepend apiSchemas = ["IsaacLinkAPI"]
+                                        )
+                                        {
+                                        }
+                                    }
+                                }
+                            }
+
+                            over "right_suspension_beam_rear_mount"
+                            {
+                                over "rear_right_motor_link" (
+                                    prepend apiSchemas = ["IsaacLinkAPI"]
+                                )
+                                {
+                                    over "rear_right_motor_mount"
+                                    {
+                                        over "rear_right_wheel_link" (
+                                            prepend apiSchemas = ["IsaacLinkAPI"]
+                                        )
+                                        {
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "default_mount"
+                {
+                    over "top_plate_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+                }
+
+                over "front_bumper_mount" (
+                    prepend apiSchemas = ["IsaacSiteAPI"]
+                )
+                {
+                }
+
+                over "rear_bumper_mount" (
+                    prepend apiSchemas = ["IsaacSiteAPI"]
+                )
+                {
+                }
+
+                over "base_footprint" (
+                    prepend apiSchemas = ["IsaacSiteAPI"]
+                )
+                {
+                }
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        over "top_plate_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "chassis_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "left_suspension_beam_spacer_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "left_suspension_beam_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "right_suspension_beam_spacer_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "right_suspension_beam_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "front_left_motor_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "front_right_motor_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "front_left_wheel_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "front_right_wheel_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rear_left_motor_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rear_right_motor_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rear_left_wheel_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rear_right_wheel_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+    }
+}
+

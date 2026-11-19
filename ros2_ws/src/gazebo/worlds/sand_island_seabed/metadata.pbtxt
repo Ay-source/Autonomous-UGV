@@ -1,0 +1,22 @@
+name: "sand_island_seabed"
+description: "The seabed at Sand Island, Honolulu, from bathymetry: optional. Bathymetry: NOAA NCEI Continuously Updated Digital Elevation Model (CUDEM), 1/9 arc second, Hawaii (2021), public domain."
+version: 1
+model {
+  file: "model.sdf"
+  file_format { name: "sdf" version { major: 1 minor: 12 } }
+}
+authors {
+  name: "Honu Robotics"
+}
+legal {
+  copyright: "Copyright 2026 Honu Robotics. Bathymetry: NOAA NCEI Continuously Updated Digital Elevation Model (CUDEM), 1/9 arc second, Hawaii (2021), public domain."
+  license: "Creative Commons Attribution 4.0 International"
+}
+tags: "maritime"
+tags: "gz-maritime"
+tags: "sand island"
+tags: "robotx"
+tags: "vrx"
+tags: "seabed"
+tags: "bathymetry"
+categories { first: "Places and Landscapes" }

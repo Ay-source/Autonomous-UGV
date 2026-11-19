@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>a300_description</name>
+  <version>1.0.0</version>
+  <description>MYBOTSHOP Clearpath Husky A300 base-platform URDF description (trimmed from hsky_description: chassis, top plate, suspension, wheels and drivetrain only -- excludes accessory sensor mounts and the optional xArm850 manipulator, neither of which is documented on the public A300 docs site)</description>
+  <author email="support@mybotshop.de">Salman Omar Sohail</author>
+  <maintainer email="support@mybotshop.de">Salman Omar Sohail</maintainer>
+  <license>BSD</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>urdf</depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
