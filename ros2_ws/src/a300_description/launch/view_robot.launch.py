@@ -33,7 +33,7 @@ def generate_launch_description():
             value_type=str
         )
     }
-"""
+
     node_robot_state_publisher = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
@@ -47,7 +47,7 @@ def generate_launch_description():
         name="joint_state_publisher_gui",
         output="screen",
     )
-"""
+
     node_rviz = Node(
         package="rviz2",
         executable="rviz2",
