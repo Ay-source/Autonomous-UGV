@@ -1,4 +1,4 @@
-# Autonomous-UGV
+# An uncertainty-aware utonomous-UGV
 This is my project on simulating a fully autonomous UGV
 
 Robot used: Husky a300 robot 
