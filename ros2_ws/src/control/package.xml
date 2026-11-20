@@ -3,11 +3,22 @@
 <package format="3">
   <name>control</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="forby@todo.todo">forby</maintainer>
+  <description>Handles the hardware and ros2 control of the autonomous ugv</description>
+  <maintainer email="Ayomidesamuel04@gmail.com">forby</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>controller_manager</depend>
+  <depend>diff_drive_controller</depend>
+  <depend>joint_state_broadcaster</depend>
+  <depend>hardware_interface</depend>
+  <depend>gz_ros2_control</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>rclpy</depend>
+
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
